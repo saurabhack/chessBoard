@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: azure;
+        }
+        .parent{
+            height: 93vh;
+            width:50vw;
+            border:2px solid black;
+            margin: 12px;
+            position: relative;
+            left:25%;
+            background-color: rgb(230, 229, 227);
+            box-shadow: 2px 2px black  ;
+           
+        }
+        .firstRow{
+            display: flex;
+        }
+        .firstRow:nth-of-type(even) {
+  background: lightgreen;
+}
+        .chessBox{
+            height:11vh;
+            width:8vw;
+
+            border:2px solid black;
+        }
+        .secondRow{
+            display: flex;
+        }
+        
+        .fifthRow{
+            display: flex;
+        }
+        .thirdRow{
+            display: flex;
+        }
+        .fourthRow{
+            display: flex;
+        }
+        .sixthRow{
+            display: flex;
+        }
+        
+        .seventhRow{
+            display: flex;
+        }
+        
+        .eigthRow{
+            display: flex;
+        }
+        
+        .ninethRow{
+            display: flex;
+        }
+        #rook{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/029/475/119/original/black-rook-chess-piece-clipart-flat-design-icon-isolated-on-transparent-background-3d-render-chess-and-board-game-concept-png.png");
+            background-size: contain;
+        }
+        #knight{
+            background-image: url("https://images.vexels.com/media/users/3/254459/isolated/preview/10f1211d7b69a53aa633f3581158179c-knight-chess-piece-black-color-stroke.png");
+            background-size: 100% 100%;
+        }
+        #bishop{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/029/479/321/original/black-bishop-chess-piece-clipart-flat-design-icon-isolated-on-transparent-background-3d-render-chess-and-board-game-concept-png.png");
+            background-size: contain;
+        }
+        #king{
+            background-image: url("https://images.vexels.com/media/users/3/255143/isolated/preview/7465e004271c9fabab59bebc8ee26878-king-chess-piece-realistic-silhouette.png");
+            background-size: 100% 100%;
+        }
+        #queen{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdg61ojHP9KbmE6btcrRrraFtDLhonpG0Nqw&s");
+            background-size: 100% 100%;
+        }
+        #bishop1{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/029/479/321/original/black-bishop-chess-piece-clipart-flat-design-icon-isolated-on-transparent-background-3d-render-chess-and-board-game-concept-png.png");
+            background-size: contain;
+        }
+        #knight2{
+            background-image: url("https://images.vexels.com/media/users/3/254459/isolated/preview/10f1211d7b69a53aa633f3581158179c-knight-chess-piece-black-color-stroke.png");
+            background-size: 100% 100%;
+        }
+        #rook{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/029/475/119/original/black-rook-chess-piece-clipart-flat-design-icon-isolated-on-transparent-background-3d-render-chess-and-board-game-concept-png.png");
+            background-size: contain;
+        }
+        #pawn1{
+            background-image: url("https://images.vexels.com/media/users/3/254460/isolated/preview/383fc882bc94d1977bd0813575b9b6b4-pawn-chess-piece-black-color-stroke.png");
+            background-size: contain;
+
+            
+        }
+        #pawn2{
+            background-image: url("https://images.vexels.com/media/users/3/254460/isolated/preview/383fc882bc94d1977bd0813575b9b6b4-pawn-chess-piece-black-color-stroke.png");
+            background-size: contain;
+
+            
+        }
+        #pawn3{
+            background-image: url("https://images.vexels.com/media/users/3/254460/isolated/preview/383fc882bc94d1977bd0813575b9b6b4-pawn-chess-piece-black-color-stroke.png");
+            background-size: contain;
+
+            
+        }
+        #pawn4{
+            background-image: url("https://images.vexels.com/media/users/3/254460/isolated/preview/383fc882bc94d1977bd0813575b9b6b4-pawn-chess-piece-black-color-stroke.png");
+            background-size: contain;
+
+            
+        }
+        #pawn5{
+            background-image: url("https://images.vexels.com/media/users/3/254460/isolated/preview/383fc882bc94d1977bd0813575b9b6b4-pawn-chess-piece-black-color-stroke.png");
+            background-size: contain;
+
+            
+        }
+        #pawn6{
+            background-image: url("https://images.vexels.com/media/users/3/254460/isolated/preview/383fc882bc94d1977bd0813575b9b6b4-pawn-chess-piece-black-color-stroke.png");
+            background-size: contain;
+
+            
+        }
+        #pawn7{
+            background-image: url("https://images.vexels.com/media/users/3/254460/isolated/preview/383fc882bc94d1977bd0813575b9b6b4-pawn-chess-piece-black-color-stroke.png");
+            background-size: contain;
+
+            
+        }
+        #pawn8{
+            background-image: url("https://images.vexels.com/media/users/3/254460/isolated/preview/383fc882bc94d1977bd0813575b9b6b4-pawn-chess-piece-black-color-stroke.png");
+            background-size: contain;
+
+            
+        }
+        #rookWh{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/029/570/943/non_2x/white-rook-chess-piece-clipart-flat-design-icon-isolated-on-transparent-background-3d-render-chess-and-board-game-concept-png.png");
+            background-size: contain;
+        }
+        #knightWh{
+           background-image: url("https://www.shutterstock.com/image-illustration/knight-chess-piece-on-white-260nw-81381691.jpg");
+        background-size:100% 100%;
+        }
+        #bishopWh{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/020/004/408/non_2x/3d-rendering-white-bishop-isolated-on-transparent-background-object-clipping-path-on-file-png.png   ");
+            background-size: 100% 100%;
+        }
+        #kingWh{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7wTEFhEfdrtmHEYsIOP7JRG4KQCyZ9JLiDA&s");
+            background-size: 100% 100%;
+        }
+        #queenWh{
+            background-image: url("https://images.vexels.com/media/users/3/254456/isolated/preview/d7a2f9afd47dbefcccd32dbae2f6a576-white-queen-chess-piece-color-stroke.png");
+            background-size: contain;
+        }
+        #bishopWh2{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/020/004/408/non_2x/3d-rendering-white-bishop-isolated-on-transparent-background-object-clipping-path-on-file-png.png   ");
+            background-size: 100% 100%;
+        }
+        #knightWh2{
+           background-image: url("https://pngimg.com/d/chess_PNG8438.png");
+        background-size:100% 100%;
+        }
+        #rookWh2{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/029/570/943/non_2x/white-rook-chess-piece-clipart-flat-design-icon-isolated-on-transparent-background-3d-render-chess-and-board-game-concept-png.png");
+            background-size: contain;
+        }
+        #pawnWh2{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/020/004/407/non_2x/3d-rendering-white-pawn-isolated-on-transparent-background-object-clipping-path-on-file-png.png");
+            background-size: contain;
+
+        }
+        #pawnWh1{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/020/004/407/non_2x/3d-rendering-white-pawn-isolated-on-transparent-background-object-clipping-path-on-file-png.png");
+            background-size: contain;
+
+        }#pawnWh3{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/020/004/407/non_2x/3d-rendering-white-pawn-isolated-on-transparent-background-object-clipping-path-on-file-png.png");
+            background-size: contain;
+
+        }#pawnWh4{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/020/004/407/non_2x/3d-rendering-white-pawn-isolated-on-transparent-background-object-clipping-path-on-file-png.png");
+            background-size: contain;
+
+        }#pawnWh5{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/020/004/407/non_2x/3d-rendering-white-pawn-isolated-on-transparent-background-object-clipping-path-on-file-png.png");
+            background-size: contain;
+
+        }#pawnWh6{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/020/004/407/non_2x/3d-rendering-white-pawn-isolated-on-transparent-background-object-clipping-path-on-file-png.png");
+            background-size: contain;
+
+        }#pawnWh7{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/020/004/407/non_2x/3d-rendering-white-pawn-isolated-on-transparent-background-object-clipping-path-on-file-png.png");
+            background-size: contain;
+
+        }#pawnWh8{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/020/004/407/non_2x/3d-rendering-white-pawn-isolated-on-transparent-background-object-clipping-path-on-file-png.png");
+            background-size: contain;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="firstRow">
+        <div class="chessBox"  id="rook"></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);"   id="knight"></div>
+        <div class="chessBox" id="bishop"></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);" id="king" ></div>
+        <div class="chessBox"  id="queen"></div>
+        <div class="chessBox"  style="background-color: rgb(93, 87, 87);" id="bishop1" ></div>
+        <div class="chessBox"   id="knight2"></div>
+        <div class="chessBox"   style="background-color: rgb(93, 87, 87);" id="rook"></div>
+    </div>
+    <div class="secondRow">
+        <div class="chessBox"  style="background-color: rgb(93, 87, 87);" id="pawn1"></div>
+        <div class="chessBox" id="pawn2"></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);" id="pawn3"></div>
+        <div class="chessBox" id="pawn4"></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);" id="pawn5"></div>
+        <div class="chessBox" id="pawn6"></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);" id="pawn7"></div>
+        <div class="chessBox" id="pawn8"></div>
+    </div> 
+    
+    <div class="thirdRow">
+        <div class="chessBox"></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);"></div>
+        <div class="chessBox"></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);"></div>
+        <div class="chessBox" ></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);"></div>
+        <div class="chessBox"></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);"></div>
+    </div> 
+    
+    <div class="fourthRow">
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);"></div>
+        <div class="chessBox"></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);"></div>
+        <div class="chessBox"></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);"></div>
+        <div class="chessBox"></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);"></div>
+        <div class="chessBox"></div>
+    </div> 
+    <div class="fifthRow">
+        <div class="chessBox"></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);"></div>
+        <div class="chessBox"></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);"></div>
+        <div class="chessBox"></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);"></div>
+        <div class="chessBox"></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);"></div>
+    </div> 
+    <div class="sixthRow">
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);" ></div>
+        <div class="chessBox"></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);"></div>
+        <div class="chessBox" ></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);"></div>
+        <div class="chessBox" ></div>
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);"></div>
+        <div class="chessBox" ></div>
+    </div> 
+    <div class="seventhRow">
+        <div class="chessBox"   id="pawnWh1"></div>
+        <div class="chessBox" id="pawnWh2" style="background-color: rgb(93, 87, 87);"></div>
+        <div class="chessBox" id="pawnWh3"></div>
+        <div class="chessBox"   id="pawnWh4"style="background-color: rgb(93, 87, 87);"></div>
+        <div class="chessBox" id="pawnWh5"></div>
+        <div class="chessBox" id="pawnWh6"  style="background-color: rgb(93, 87, 87);"></div>
+        <div class="chessBox" id="pawnWh7" ></div>
+        <div class="chessBox" id="pawnWh8" style="background-color: rgb(93, 87, 87);"></div>
+    </div> 
+    <div class="eigthRow">
+        <div class="chessBox" style="background-color: rgb(93, 87, 87);" id="rookWh"></div>
+        <div class="chessBox" id="knightWh" ></div>
+        <div class="chessBox"   style="background-color: rgb(93, 87, 87);" id="bishopWh"></div>
+        <div class="chessBox" id="kingWh" ></div>
+        <div class="chessBox" id="queenWh" style="background-color: rgb(93, 87, 87);"></div>
+        <div class="chessBox" id="bishopWh2"></div>
+        <div class="chessBox" id="knightWh2" style="background-color: rgb(93, 87, 87);"></div>
+        <div class="chessBox" id="rookWh2"></div>
+    </div> 
+    </div>
+</body>
+</html>
